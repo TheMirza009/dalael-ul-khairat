@@ -16,6 +16,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    ThemeConstants.screenWidth = MediaQuery.sizeOf(context).width;
+    ThemeConstants.screenHeight = MediaQuery.sizeOf(context).height;
     return Consumer(
       builder: (context, ref, child) {
         return MaterialApp(

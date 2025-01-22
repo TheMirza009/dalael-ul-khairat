@@ -56,6 +56,7 @@ class PDFScreen extends StatelessWidget {
             padding: EdgeInsets.all(8.0),
             child: AudioPlayerWidget(audioPath: "Assets/Surah al-mulk.mp3"),
           ),
+          
           // Use FutureBuilder to load the PDF
           FutureBuilder<String>(
             future: loadPdf(),
