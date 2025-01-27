@@ -73,7 +73,7 @@ class PDFScreen extends StatelessWidget {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
                     ),
-                    height: ThemeConstants.screenHeight * 0.765,
+                    height: ThemeConstants.screenHeight * 0.690,
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(12),
                       child: PDFView(

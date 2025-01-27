@@ -1,5 +1,6 @@
 import 'package:dalael_ul_kahirat/core/theme/theme_constants.dart';
 import 'package:dalael_ul_kahirat/core/theme/theme_provider_class.dart';
+import 'package:dalael_ul_kahirat/root/Presentation/Screens/homescreen.dart';
 import 'package:dalael_ul_kahirat/root/Presentation/Screens/pdfview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -10,10 +11,10 @@ void main() async {
   await Hive.initFlutter();
   runApp(const ProviderScope(child: MyApp()));
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     ThemeConstants.screenWidth = MediaQuery.sizeOf(context).width;
@@ -21,11 +22,11 @@ class MyApp extends StatelessWidget {
     return Consumer(
       builder: (context, ref, child) {
         return MaterialApp(
-          title: 'Flutter Demo',
+          title: 'دلائل الخیرات',
           themeMode: ref.watch(themeProvider), // Riverpod Theme
             theme: ThemeConstants.lightTheme,
             darkTheme: ThemeConstants.darkTheme,
-          home: PDFScreen(),
+          home: Homescreen(),
         );
       }
     );
